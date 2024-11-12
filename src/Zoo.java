@@ -1,13 +1,22 @@
+package tn.esprit.gestionzoo.entities;
 public class Zoo {
-    private static final int nbrCages = 25;
-    Animal[] animals;
+    private  int nbrCages ;
+    private Animal[] animals;
     int count;
 
     public Zoo() {
         count = 0;
         animals = new Animal[nbrCages];
     }
-
+public int getNbrCages() {
+        return nbrCages;
+}
+public Animal[] getAnimals() {
+        return animals;
+}
+public void setAnimals(Animal[] animals) {
+        this.animals = animals;
+}
 
     public boolean addAnimal(Animal animal) {
         if (searchAnimal(animal) != -1) {
